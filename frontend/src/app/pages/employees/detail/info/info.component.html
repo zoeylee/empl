@@ -1,0 +1,63 @@
+<form>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Full Name</label>
+    <div class="col-md-8 input-group">
+      {{profile.user?.first_name}} {{profile.user?.last_name}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Name</label>
+    <div class="col-md-8 input-group">
+      {{profile.user?.username}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Department</label>
+    <div class="col-md-8 input-group">
+      {{profile.department?.name}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Email</label>
+    <div class="col-md-8 input-group">
+      {{profile.user?.email}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Title</label>
+    <div class="col-md-8 input-group">
+      {{profile.title}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Phone</label>
+    <div class="col-md-8 input-group">
+      {{profile.phone}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Moblie</label>
+    <div class="col-md-8 input-group">
+      {{profile.mobile}}
+    </div>
+  </div>
+  <div class="form-group row">
+      <label class="col-md-4 control-label">Address</label>
+      <div class="col-md-8 input-group">
+        {{profile.address}}
+      </div>
+    </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Working Type</label>
+    <div class="col-md-8 input-group">
+      {{profile.working_type}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-md-4 control-label">Status</label>
+    <div class="col-md-8 input-group">
+      <span *ngIf="profile.active" style="color: #268276">Active</span>
+      <span *ngIf="!profile.active" style="color: #eb643a">InActive </span>
+    </div>
+  </div>
+</form>

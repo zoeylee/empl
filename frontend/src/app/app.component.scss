@@ -1,0 +1,13 @@
+.nav-item > .active {
+    color: #fff;
+    background-color: #080808;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+#dropdown-menu-one-line {
+  white-space: nowrap
+}

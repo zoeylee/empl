@@ -1,0 +1,11 @@
+<div class="btn-group btn-group-sm" role="group">
+  <div class="btn btn-default" [ngClass]="{disabled: pager.pageNo === 1}" (click)="setPage(pager.pageNo - 1)">
+    <div class="pager-icon-left"></div>
+  </div>
+  <div *ngFor="let item of pager.pageItems" class="btn btn-default" [ngClass]="{active: pager.pageNo === item}" (click)="setPage(item)">
+    {{ item }}
+  </div>
+  <div class="btn btn-default" [ngClass]="{disabled: pager.pageNo === pager.totalPages}" (click)="setPage(pager.pageNo + 1)">
+    <div class="pager-icon-right"></div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="row" style="margin: 0 2rem">
+  <div class="section-header">
+    <h4>Employees</h4>
+  </div>
+  <div>
+    <div class="col-xs-3" style="padding-left: 0px;">
+      <app-search [searchText]="searchText" (searchTrigger)="refreshData($event)"></app-search>
+    </div>
+    <app-pager [(newPager)]="pager" [searchText]="searchText" (pageChanged)="refreshData($event)"></app-pager>
+    <div style="margin-top: 1.5rem">
+      <table class="table table-cell table-striped table-hover" style="border: 1px solid #ddd;">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>FullName</th>
+            <th>User Name</th>
+            <th>Title</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Moblie</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items;let i = index;"
+              [attr.data-index]="i"
+              (click)="onClick(item.user.id)">
+            <td>
+              {{item.department?.name}}
+            </td>
+            <td>
+              {{item.user?.first_name}} {{item.user?.last_name}}
+            </td>
+            <td>
+              {{item.user?.username}}
+            </td>
+            <td>
+              {{item.title}}
+            </td>
+            <td>
+              {{item.user?.email}}
+            </td>
+            <td>
+              {{item.phone}}
+            </td>
+            <td>
+              {{item.moblie}}
+            </td>
+            <td>
+              <span *ngIf="item.active" style="color: #268276">Active</span>
+              <span *ngIf="!item.active" style="color: #eb643a">InActive </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
