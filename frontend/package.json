@@ -26,13 +26,14 @@
     "@types/jquery": "^3.3.1",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.3",
+    "hoek": "^5.0.4",
     "ngx-bootstrap": "^2.0.3",
     "rxjs": "^5.5.7",
     "sweetalert2": "^7.18.0",
     "zone.js": "^0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.7.3",
+    "@angular/cli": "^6.2.3",
     "@angular/compiler-cli": "^4.4.6",
     "@angular/language-service": "^4.4.6",
     "@types/datatables.net": "^1.10.9",
