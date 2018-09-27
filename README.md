@@ -20,7 +20,7 @@ This README would normally document whatever steps are necessary to get your app
                 -> python -m virtualenv venv
                 -> source venv/bin/activate
                 -> pip install -r requirements.txt
-                -> configure database name, user, password in redington_uber/settings.py
+                -> configure database name, user, password in empl/settings.py
                     DATABASES = {
                         'default': {
                             'ENGINE': 'django.db.backends.mysql', 
