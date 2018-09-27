@@ -2069,7 +2069,7 @@ body {
 #ops .navbar .navbar-brand {
   min-height: 40px;
   height: 40px;
-  padding: 8px 14px;
+  /* padding: 8px 14px; */
 }
 
 #ops .navbar .navbar-nav {

@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {LocationStrategy, Location, HashLocationStrategy } from '@angular/common';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './guards/index';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpTokenInterceptor } from './providers/interceptors/http.token.interceptor';
 
 import { ApiService, JwtService, UserService, EmployeeService } from '~services';
-
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { ApiService, JwtService, UserService, EmployeeService } from '~services'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule,
+    HttpClientModule,
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
     ApiService,
     JwtService,
     AuthGuard,

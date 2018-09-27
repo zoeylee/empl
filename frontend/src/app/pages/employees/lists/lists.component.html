@@ -1,13 +1,14 @@
-<div class="row" style="margin: 0 2rem">
-  <div class="section-header">
+<div class="" style="margin: 0 2rem">
+  <div class="row">
     <h4>Employees</h4>
   </div>
-  <div>
-    <div class="col-xs-3" style="padding-left: 0px;">
-      <app-search [searchText]="searchText" (searchTrigger)="refreshData($event)"></app-search>
-    </div>
+  <div class="row">
+    <app-search [searchText]="searchText" (searchTrigger)="refreshData($event)"></app-search>
+  </div>
+    <div class="row">
     <app-pager [(newPager)]="pager" [searchText]="searchText" (pageChanged)="refreshData($event)"></app-pager>
-    <div style="margin-top: 1.5rem">
+  </div>
+    <div class="row">
       <table class="table table-cell table-striped table-hover" style="border: 1px solid #ddd;">
         <thead>
           <tr>
@@ -54,5 +55,4 @@
         </tbody>
       </table>
     </div>
-  </div>
 </div>

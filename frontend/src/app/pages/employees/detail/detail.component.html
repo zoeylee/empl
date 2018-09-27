@@ -1,27 +1,24 @@
-<div class="row" style="margin: 0 2rem">
-    <div class="section-header" style="padding-left: 15px;">
+<div style="margin: 0 2rem">
+    <div class="row">
       <h4>Employees Detail</h4>
     </div>
-    <div>
-      <div style="margin-top: 1.5rem">
-        <div class="col-md-2">
-          <img [src]="imgUrl" class="img-thumbnail">
-          <div style="padding-top: .5rem">{{user.user?.first_name}} {{user.user?.last_name}}</div>
-          <div>{{user.user?.email}}</div>
-          <div *ngIf="user.active" style="color: #268276">Active</div>
-          <div *ngIf="!user.active" style="color: #eb643a">InActive</div>
+    <div class="row">
+        <div class="col-6 col-md-4" style="padding-left: 0px">
+            <img [src]="imgUrl" class="img-thumbnail">
+            <div style="padding-top: .5rem"><h5>{{user.user?.first_name}} {{user.user?.last_name}}</h5></div>
+            <div>{{user.user?.email}}</div>
+            <span *ngIf="user.active" class="badge badge-success">Active</span>
+            <span *ngIf="!user.active" class="badge badge-danger">InActive</span>
         </div>
-        <div class="col-md-10">
-          <tabset>
-            <tab heading="Information" id="tab1" class="custom_border">
-              <app-info [id]="id"></app-info>
-            </tab>
-            <tab *ngIf="isAdmin" heading="Work Permit" class="custom_border">
-              <app-contract [id]="id"></app-contract>
-            </tab>
-          </tabset>
+        <div class="col-12 col-md-8">
+            <tabset>
+                <tab heading="Information" id="tab1" class="custom_border">
+                  <app-info [id]="id"></app-info>
+                </tab>
+                <tab *ngIf="isAdmin" heading="Work Permit" class="custom_border">
+                  <app-contract [id]="id"></app-contract>
+                </tab>
+              </tabset>
         </div>
-        
-      </div>
     </div>
   </div>

@@ -49,7 +49,6 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
     this.userService.logout();
-    this.userService.currentUser.subscribe(user => this.currentUser = user)
   }
 
   selectedUserEventHandler(user: any) {
@@ -63,8 +62,7 @@ export class AuthComponent implements OnInit {
     this.loading = true;
     this.errors = new Errors();
     const credentials = this.authForm.value;
-    this.userService.login(credentials)
-    .subscribe(
+    this.userService.login(credentials).subscribe(
       data => {
         this.router.navigateByUrl('/pages/employee-list');
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';

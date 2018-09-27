@@ -10,25 +10,57 @@
     "target": "es5",
     "baseUrl": "src",
     "paths": {
-        "~environments/*": [ "environments/*" ],
-        "~app/*": ["app/*"],
-        "~assets/*": ["assets/*"],
-        "~components": [ "app/providers/components/index.ts" ],
-        "~components/*": [ "app/providers/components/*" ],
-        "~models": [ "app/providers/models/index.ts" ],
-        "~models/*": [ "app/providers/models/*" ],
-        "~services": [ "app/providers/services/index.ts" ],
-        "~services/*": [ "app/providers/services/*" ],
-        "~factorys": [ "app/providers/factorys/index.ts" ],
-        "~factorys/*": [ "app/providers/factorys/*" ],
-        "~shared": [ "app/pages/shared/index.ts" ],
-        "~shared/*": [ "app/pages/shared/*" ],
-        "~pages/*": [ "app/pages/*" ],
-        "~auth/*": [ "app/auth/*" ],
-        "~not-found/*": [ "app/not-found/*" ],
-        "@angular/*": [
-          "../node_modules/@angular/*"
-        ]
+      "~environments/*": [
+        "environments/*"
+      ],
+      "~app/*": [
+        "app/*"
+      ],
+      "~assets/*": [
+        "assets/*"
+      ],
+      "~components": [
+        "app/providers/components/index.ts"
+      ],
+      "~components/*": [
+        "app/providers/components/*"
+      ],
+      "~models": [
+        "app/providers/models/index.ts"
+      ],
+      "~models/*": [
+        "app/providers/models/*"
+      ],
+      "~services": [
+        "app/providers/services/index.ts"
+      ],
+      "~services/*": [
+        "app/providers/services/*"
+      ],
+      "~factorys": [
+        "app/providers/factorys/index.ts"
+      ],
+      "~factorys/*": [
+        "app/providers/factorys/*"
+      ],
+      "~shared": [
+        "app/pages/shared/index.ts"
+      ],
+      "~shared/*": [
+        "app/pages/shared/*"
+      ],
+      "~pages/*": [
+        "app/pages/*"
+      ],
+      "~auth/*": [
+        "app/auth/*"
+      ],
+      "~not-found/*": [
+        "app/not-found/*"
+      ],
+      "@angular/*": [
+        "../node_modules/@angular/*"
+      ]
     },
     "typeRoots": [
       "node_modules/@types"
@@ -36,6 +68,7 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "module": "es2015"
   }
 }

@@ -1,39 +1,41 @@
 <!--<div class="container-fluid">-->
-  <!--<div class="row">-->
-    <!--<div class="col-md-6 offset-md-3 col-xs-12" style="top:70px;">-->
-      <!--<h1 class="text-xs-center">LILEE Systems {{ productName }} Login</h1>-->
-      <!--<app-list-errors [errors]="errors"></app-list-errors>-->
-      <!--<form [formGroup]="authForm" (ngSubmit)="submitForm()">-->
-        <!--<fieldset [disabled]="isSubmitting">-->
-          <!--<fieldset class="form-group username">-->
-            <!--<input id="username" formControlName="username" placeholder="Username" class="form-control form-control-lg" [ngClass]= "{'is-invalid': username.hasError('minlength')}" type="text" />-->
-            <!--<div *ngIf="username.hasError('minlength')" class="invalid-feedback">-->
-              <!--The username requires at least 4 characters-->
-            <!--</div>-->
-          <!--</fieldset>-->
-          <!--<fieldset class="form-group password">-->
-            <!--<input id="password" formControlName="password" placeholder="Password" class="form-control form-control-lg" [ngClass]= "{'is-invalid': password.hasError('minlength')}" type="password" />-->
-            <!--<div *ngIf="password.hasError('minlength')" class="invalid-feedback">-->
-              <!--The password must be more than 8 characters long-->
-            <!--</div>-->
-          <!--</fieldset>-->
-          <!--<button class="btn btn-lg btn-primary pull-xs-left" [disabled]="!authForm.valid" type="submit">-->
-            <!--{{ title }}-->
-          <!--</button>-->
-        <!--</fieldset>-->
-      <!--</form>-->
-    <!--</div>-->
-  <!--</div>-->
+<!--<div class="row">-->
+<!--<div class="col-md-6 offset-md-3 col-xs-12" style="top:70px;">-->
+<!--<h1 class="text-xs-center">LILEE Systems {{ productName }} Login</h1>-->
+<!--<app-list-errors [errors]="errors"></app-list-errors>-->
+<!--<form [formGroup]="authForm" (ngSubmit)="submitForm()">-->
+<!--<fieldset [disabled]="isSubmitting">-->
+<!--<fieldset class="form-group username">-->
+<!--<input id="username" formControlName="username" placeholder="Username" class="form-control form-control-lg" [ngClass]= "{'is-invalid': username.hasError('minlength')}" type="text" />-->
+<!--<div *ngIf="username.hasError('minlength')" class="invalid-feedback">-->
+<!--The username requires at least 4 characters-->
+<!--</div>-->
+<!--</fieldset>-->
+<!--<fieldset class="form-group password">-->
+<!--<input id="password" formControlName="password" placeholder="Password" class="form-control form-control-lg" [ngClass]= "{'is-invalid': password.hasError('minlength')}" type="password" />-->
+<!--<div *ngIf="password.hasError('minlength')" class="invalid-feedback">-->
+<!--The password must be more than 8 characters long-->
+<!--</div>-->
+<!--</fieldset>-->
+<!--<button class="btn btn-lg btn-primary pull-xs-left" [disabled]="!authForm.valid" type="submit">-->
+<!--{{ title }}-->
+<!--</button>-->
+<!--</fieldset>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
 <!--</div>-->
 
 
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 form-box">
+    <div class="col align-self-center">
       <div class="login-form">
         <div class="form-title">
           <b>Sign in</b>
         </div>
+
+
 
         <app-list-errors [errors]="errors"></app-list-errors>
         <form [formGroup]="authForm" (ngSubmit)="submitForm()">
@@ -41,9 +43,13 @@
 
             <fieldset class="form-group username">
               <div class="input-group">
-                <span class="input-group-addon"><i class="ic-user"></i></span>
-                <input id="username" formControlName="username" placeholder="Username" class="form-control form-control-lg"
-                       [ngClass]= "{'is-invalid': username.hasError('minlength')}" type="text" required="required" />
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="ic-user"></i>
+                  </span>
+                </div>
+                <input id="username" formControlName="username" placeholder="Username" class="form-control form-control-lg" [ngClass]="{'is-invalid': username.hasError('minlength')}"
+                  type="text" required="required" />
               </div>
 
               <div class="alert alert-danger" [hidden]="username.valid || !isSubmitting">
@@ -54,9 +60,14 @@
             <fieldset class="form-group password">
               <div class="form-group">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="ic-lock"></i></span>
-                  <input id="password" formControlName="password" placeholder="Password" class="form-control form-control-lg"
-                         [ngClass]= "{'is-invalid': password.hasError('minlength')}" type="password" required="required" />
+
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                          <i class="ic-lock"></i>
+                      </span>
+                    </div>
+                  <input id="password" formControlName="password" placeholder="Password" class="form-control form-control-lg" [ngClass]="{'is-invalid': password.hasError('minlength')}"
+                    type="password" required="required" />
                 </div>
               </div>
 
@@ -83,7 +94,3 @@
   </div>
 
 </div>
-
-
-
-
