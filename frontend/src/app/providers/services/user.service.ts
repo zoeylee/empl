@@ -64,8 +64,7 @@ export class UserService {
   }
 
   getCurrentUser():  Observable<any> {
-    return this.apiService.get(`/user/current`)
-           .map(res => res);
+    return this.apiService.get(`/user/current`).pipe(map(res => res));
   }
 
 }
