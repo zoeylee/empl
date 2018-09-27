@@ -35,10 +35,11 @@ This README would normally document whatever steps are necessary to get your app
                        
 * How to run tests
 * Integrations
-    
-    Deployment to django folder:
-        -> go to frontend
-        -> run deploy.sh
+        
+            Deployment to django folder:
+            -> go to frontend
+            -> run deploy.sh
+        
    
 * Project Structure
     - empl
