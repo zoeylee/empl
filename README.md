@@ -2,7 +2,12 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### How do I get set up? ###
+### Requirements ###
+
+* python on django
+* angular 6+
+
+### Set up ###
 
 * Summary of set up
 * Configuration:
@@ -33,7 +38,6 @@ This README would normally document whatever steps are necessary to get your app
                 -> npm install
                 -> ng serve
                        
-* How to run tests
 * Integrations
         
             Deployment to django folder:
