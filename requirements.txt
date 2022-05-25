@@ -17,7 +17,7 @@ Naked==0.1.31
 Pillow==5.2.0
 pyasn1==0.4.4
 pycryptodome==3.6.6
-PyJWT==1.6.4
+PyJWT==2.4.0
 python-keyczar==0.716
 pytz==2018.5
 PyYAML==3.13
